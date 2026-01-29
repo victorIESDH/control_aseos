@@ -13,7 +13,7 @@ class AlumnoController extends Controller
     public function index()
     {
         //Obtener todos los alumnos y se los pasamos a la vista de listado
-        $alumnos = alumno::get();
+        $alumnos = alumno::paginate(2);
         return view('alumnos.listado', compact('alumnos'));
     }
 

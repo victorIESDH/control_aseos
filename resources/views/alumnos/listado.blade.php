@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Alumnos</title>
-</head>
-<body>
-    <h1>Gestión de Alumnos</h1>
-    <a href="{{ route('alumnos.create') }}">Agregar Nuevo Alumno</a>
-    <table border="1">
+@extends('layouts.plantilla')
+@section('content')
+<h1>Gestión de Alumnos</h1>
+    <a href="{{ route('alumnos.create') }}" class="button">Agregar Nuevo Alumno</a>
+    <br><br>
+    <table class="table">
         <thead>
             <tr>
                 <th>ID</th>
@@ -35,5 +30,5 @@
             @endforeach
         </tbody>
     </table>
-</body>
-</html>
+    {{ $alumnos->links() }}
+@endsection

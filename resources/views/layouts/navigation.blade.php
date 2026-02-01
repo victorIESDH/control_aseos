@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('alumnos.index')" :active="request()->routeIs('alumnos.index')">
                         {{ __('Alumnos') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('aseos.index')" :active="request()->routeIs('aseos.index')">
+                        {{ __('Aseos') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('register')" :active="request()->routeIs('register')">
                         {{ __('Registro usuarios') }}
                     </x-nav-link>

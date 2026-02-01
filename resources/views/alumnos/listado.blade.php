@@ -1,7 +1,6 @@
 @extends('layouts.plantilla')
 @section('content')
-<h1>Gestión de Alumnos</h1>
-<br><br>
+<h1 class="titulo">Gestión de Alumnos</h1>
     <a href="{{ route('alumnos.create') }}" class="button">Agregar Nuevo Alumno</a>
     <br><br>
     <table class="table">

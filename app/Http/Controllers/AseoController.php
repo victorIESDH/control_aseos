@@ -13,6 +13,9 @@ class AseoController extends Controller
     public function index()
     {
         //
+         //Obtener todos los aseos y se los pasamos a la vista de listado
+        $aseos = aseo::paginate(5);
+        return view('aseo.listado', compact('aseos'));
     }
 
     /**

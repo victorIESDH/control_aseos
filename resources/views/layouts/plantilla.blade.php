@@ -29,7 +29,7 @@
 
             <!-- Page Content -->
             <main>
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg m-4 p-4">
                     @if (session('status'))
                         {{ session('status') }}
                     @endif

@@ -13,7 +13,7 @@ class AlumnoController extends Controller
     public function index()
     {
         //Obtener todos los alumnos y se los pasamos a la vista de listado
-        $alumnos = alumno::paginate(2);
+        $alumnos = alumno::paginate(3);
         return view('alumnos.listado', compact('alumnos'));
     }
 
@@ -31,7 +31,11 @@ class AlumnoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validaciones sobre el alumno
+        $request->validate([
+            'nombre' => 'required|string|max:50',
+            'grupo' => 'required|string|max:10',
+        ]);
         alumno::create($request->all());
         return redirect()->route('alumnos.index');  
     }

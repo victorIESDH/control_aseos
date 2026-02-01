@@ -1,6 +1,7 @@
 @extends('layouts.plantilla')
 @section('content')
 <h1>Gestión de Alumnos</h1>
+<br><br>
     <a href="{{ route('alumnos.create') }}" class="button">Agregar Nuevo Alumno</a>
     <br><br>
     <table class="table">
@@ -19,11 +20,11 @@
                 <td>{{ $alumno->nombre }}</td>
                 <td>{{ $alumno->grupo }}</td>
                 <td>
-                    <a href="{{ route('alumnos.edit', $alumno->id) }}">Editar</a>
+                    <a href="{{ route('alumnos.edit', $alumno->id) }}" class="button-secondary">Editar</a>
                     <form action="{{ route('alumnos.destroy', $alumno) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
-                        <button type="submit">Eliminar</button>
+                        <button type="submit" class="button-danger">Eliminar</button>
                     </form>
                 </td>
             </tr>

@@ -21,9 +21,6 @@
                     <x-nav-link :href="route('aseos.index')" :active="request()->routeIs('aseos.index')">
                         {{ __('Aseos') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('register')" :active="request()->routeIs('register')">
-                        {{ __('Registro usuarios') }}
-                    </x-nav-link>
                 </div>
             </div>
 
@@ -46,7 +43,9 @@
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
-
+                        <x-dropdown-link :href="route('registro')">
+                            {{ __('Registro usuarios') }}
+                        </x-dropdown-link>
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf

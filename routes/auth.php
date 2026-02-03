@@ -35,6 +35,10 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+    //ruta de registro modificada para incluir la plantilla de la aplicacion
+    Route::get('registro', [RegisteredUserController::class, 'create'])
+        ->name('registro');
+
     Route::get('register', [RegisteredUserController::class, 'create'])
         ->name('register');
     

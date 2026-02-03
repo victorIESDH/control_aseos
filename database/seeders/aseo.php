@@ -17,5 +17,9 @@ class aseo extends Seeder
         \App\Models\aseo::create(['descripcion' => 'SUM chicas']);
         \App\Models\aseo::create(['descripcion' => 'Informática chicos']);
         \App\Models\aseo::create(['descripcion' => 'Informática chicas']);
+        for ($i = 1; $i <= 10; $i++) {
+            \App\Models\aseo::create(['descripcion' => 'Aseo aula ' . $i]);
+        }
+           
     }
 }
